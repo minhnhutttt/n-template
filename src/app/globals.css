@@ -1,33 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ref. https://tailwindcss.com/blog/tailwindcss-v4-alpha  */
+@import "tailwindcss";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@theme {
+  /* --font-family-sans: -apple-system, blinkMacSystemFont, Helvetica, 'Yu Gothic', YuGothic,
+    'BIZ UDPGothic', Meiryo, sans-serif;
+  --font-family-sans: -apple-system, blinkMacSystemFont, Helvetica, 'Hiragino Sans',
+    'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', Meiryo, sans-serif;
+  --font-family-serif: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', serif; */
+  --font-family-sans: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+  --color-primary: #ff69e8;
+  --color-ss: #f10;
+  --color-primary-rgb: 255 105 232;
+  --color-bg-01: #2c2d30;
+  --color-bg-02: #5c5c5d;
+  --color-bg-03: #17181b;
+  --color-bg-04: #000000;
+  --color-bg-04-rgb: 0 0 0;
+  --color-alert: #e62719;
+  --color-caution: #fbff27;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  /* Text */
+  --color-main: #ffffff;
+  --color-sub: #999999;
+  --color-sub-02: #808080;
+  --color-sub-03: #3a3a3a;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  /* Code */
+  --color-blue: #6da7fe;
+  --color-blue-dark: #3b89ff;
+  --color-yellow: #fbff27;
+  --color-yellow-dark: #d2b20a;
+  --color-green: #4ddf99;
+  --color-green-dark: #00c366;
+  --color-orange: #ffc657;
+  --color-orange-dark: #ff9211;
+  --color-red: #f672b2;
+  --color-red-dark: #ee1b81;
+  --color-purple: #c88bf7;
+  --color-purple-dark: #a13fee;
 }
