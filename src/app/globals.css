@@ -21,9 +21,16 @@
 
 /* Slider */
 
-.js-slider .slick-slide img {
+.js-slider .slick-slide .inner {
+  opacity: 0;
   transition: all 0.3s;
 }
-.js-slider .slick-slide.slick-center img {
-  transform: translateY(-20px);
+.js-slider .slick-slide.slick-current .inner {
+  opacity: 1;
+}
+.slick-list {
+  overflow: inherit !important;
+}
+.slick-track {
+  overflow: hidden;
 }

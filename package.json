@@ -11,8 +11,8 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,vue,json,html,css,scss}\""
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
     "@tailwindcss/postcss": "^4.0.0-alpha.16",
-    "bits-ui": "^0.21.10",
     "gsap": "^3.12.5",
     "next": "14.2.4",
     "prettier": "^3.3.2",
