@@ -127,16 +127,17 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="bg-white fixed bottom-0 right-0 z-50 lg:w-[60px] lg:h-screen cursor-pointer hover:bg-gray-200 max-lg:hidden">
+      
+      <div onClick={() => setIsOpenMenu(!isOpenMenu)} className="bg-white fixed bottom-0 right-0 z-50 lg:w-[60px] lg:h-screen cursor-pointer hover:bg-gray-200 max-lg:hidden">
         <div className="h-full p-4 flex justify-center items-center">
-          <div className="text-[12px] font-bold h-24">menu</div>
+          <div className="text-[12px] font-bold h-24"><img src="/assets/images/ic-arrow-square.svg" className="w-full" alt="" />menu</div>
           </div>
         </div>
-      <div className="fixed right-0 bottom-0 z-50 w-full max-lg:h-20 max-lg:backdrop-blur-2xl lg:invisible lg:h-screen lg:w-[400px] lg:bg-gray-100 lg:opacity-0">
+      <div className={`fixed right-0 bottom-0 z-50 w-full max-lg:h-20 max-lg:backdrop-blur-2xl  lg:h-screen lg:w-[400px] lg:bg-gray-100  ${isOpenMenu ? "lg:visible lg:opacity-100" : "lg:invisible lg:opacity-0"}`}>
         <div className="h-full px-4 lg:px-6">
           <div className="flex h-24 h-full items-center justify-between lg:flex-col">
             <div
-              className={`sb-none h-screen w-full overflow-y-scroll pt-20 px-4 pb-12 max-lg:invisible max-lg:absolute max-lg:right-0 max-lg:bottom-0 max-lg:z-50 ${isOpenMenu ? "max-lg:visible max-lg:bg-black/90 max-lg:opacity-100" : "max-lg:invisible max-lg:bg-black/90 max-lg:opacity-0"} `}
+              className={`sb-none h-screen w-full overflow-y-scroll max-lg:bg-black/90 pt-20 px-4 pb-12 max-lg:invisible max-lg:absolute max-lg:right-0 max-lg:bottom-0 max-lg:z-50 ${isOpenMenu ? "max-lg:visible max-lg:bg-black/90 max-lg:opacity-100" : "max-lg:invisible  max-lg:opacity-0"} `}
             >
               <ul className="font-medium max-lg:text-white">
                 <li>
