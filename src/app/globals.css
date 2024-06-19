@@ -10,34 +10,20 @@
   --font-family-sans: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
   --font-family-mono: "JetBrains Mono", monospace;
 
-  --color-primary: #ff69e8;
-  --color-ss: #f10;
-  --color-primary-rgb: 255 105 232;
-  --color-bg-01: #2c2d30;
-  --color-bg-02: #5c5c5d;
-  --color-bg-03: #17181b;
-  --color-bg-04: #000000;
-  --color-bg-04-rgb: 0 0 0;
-  --color-alert: #e62719;
-  --color-caution: #fbff27;
+  --color-primary: #fff;
 
   /* Text */
   --color-main: #ffffff;
-  --color-sub: #999999;
-  --color-sub-02: #808080;
-  --color-sub-03: #3a3a3a;
 
   /* Code */
   --color-blue: #6da7fe;
-  --color-blue-dark: #3b89ff;
-  --color-yellow: #fbff27;
-  --color-yellow-dark: #d2b20a;
-  --color-green: #4ddf99;
-  --color-green-dark: #00c366;
-  --color-orange: #ffc657;
-  --color-orange-dark: #ff9211;
-  --color-red: #f672b2;
-  --color-red-dark: #ee1b81;
-  --color-purple: #c88bf7;
-  --color-purple-dark: #a13fee;
+}
+
+/* Slider */
+
+.js-slider .slick-slide img {
+  transition: all 0.3s;
+}
+.js-slider .slick-slide.slick-center img {
+  transform: translateY(-20px);
 }
