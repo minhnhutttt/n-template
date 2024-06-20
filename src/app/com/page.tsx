@@ -12,54 +12,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const data = [
-  {
-    image: "/assets/images/img.png",
-    title: "タイトル",
-    id: "トークンID",
-    text: (
-      <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
-      </>
-    ),
-  },
-  {
-    image: "/assets/images/sauri_009.jpg",
-    title: "タイトル",
-    id: "トークンID",
-    text: (
-      <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
-      </>
-    ),
-  },
-  {
-    image: "/assets/images/sauri_009.jpg",
-    title: "タイトル",
-    id: "トークンID",
-    text: (
-      <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
-      </>
-    ),
-  },
-  {
-    image: "/assets/images/sauri_009.jpg",
-    title: "タイトル",
-    id: "トークンID",
-    text: (
-      <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
-      </>
-    ),
-  },
-];
 export default function Home() {
-  const slider = useRef<any>(null);
   let [isOpenNote, setIsOpenNote] = useState(false);
   let [isOpenAddress, setIsOpenAddress] = useState(false);
   let [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -73,7 +26,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="h-[50vh] bg-slate-900 text-white">
+      <div className="md:h-[50vh] bg-slate-900 text-white">
         <div className="border-b flex-1">
           <div className="flex items-center justify-between gap-3 py-4 px-4">
             <div>
@@ -82,15 +35,43 @@ export default function Home() {
             <div>/ 34 </div>
           </div>
         </div>
-        <div className="h-[calc(50vh-56px)] flex items-center overflow-auto">
+        <div className="h-[calc(50vh-56px)] min-h-[280px] flex items-center overflow-auto">
             <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
                 {[...Array(12)].map((_, index) => (
-                        <img
-                            className="h-[calc(50vh-56px)] w-full object-cover snap-center"
+                  <div className="h-[calc(50vh-56px)] min-h-[280px] aspect-square" key={index}>
+                      <DialogSlider image="/assets/images/sauri_009.jpg">
+                      <img
+                            className="h-[calc(50vh-56px)] min-h-[280px] w-full object-contain snap-center"
                             src="/assets/images/sauri_009.jpg"
                             alt=""
-                            key={index}
                         />
+                      </DialogSlider>
+                  </div>
+                ))}
+            </div>
+        </div>
+      </div>
+      <div className="md:h-[50vh] bg-rose-950 text-white">
+        <div className="border-b flex-1">
+          <div className="flex items-center justify-between gap-3 py-4 px-4">
+            <div>
+              <span className="mr-2 font-black">DECK ID:</span>0xDc39…21d2
+            </div>
+            <div>/ 34 </div>
+          </div>
+        </div>
+        <div className="h-[calc(50vh-56px)] min-h-[280px] flex items-center overflow-auto">
+            <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
+                {[...Array(12)].map((_, index) => (
+                  <div className="h-[calc(50vh-56px)] min-h-[280px] aspect-square" key={index}>
+                      <DialogSlider image="/assets/images/sauri_009.jpg">
+                      <img
+                            className="h-[calc(50vh-56px)] min-h-[280px] w-full object-contain snap-center"
+                            src="/assets/images/sauri_009.jpg"
+                            alt=""
+                        />
+                      </DialogSlider>
+                  </div>
                 ))}
             </div>
         </div>

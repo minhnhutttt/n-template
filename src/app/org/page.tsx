@@ -111,7 +111,13 @@ export default function Home() {
                     {item.text}
                   </p>
                   <div className="flex justify-center overflow-hidden">
-                    <DialogSlider image={item.image} />
+                    <DialogSlider image={item.image}>
+                    <span
+                        className="block cursor-pointer text-center text-[16px] font-bold"
+                      >
+                        Infromation
+                      </span>
+                    </DialogSlider>
                   </div>
                 </div>
               </div>

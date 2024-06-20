@@ -4,13 +4,14 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 export type DialogSliderType = {
   image: string;
+  children: ReactNode;
 };
 
-export default function DialogSlider({ image }: DialogSliderType) {
+export default function DialogSlider({ image, children }: DialogSliderType) {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +20,7 @@ export default function DialogSlider({ image }: DialogSliderType) {
         onClick={() => setIsOpen(true)}
         className="block cursor-pointer text-center text-[16px] font-bold"
       >
-        Infromation
+        {children}
       </button>
       <Dialog
         open={isOpen}
