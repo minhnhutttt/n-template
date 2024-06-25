@@ -1,7 +1,8 @@
 "use client";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Scrollbar } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 import { useRef, useState } from "react";
 import DialogSlider from "./../components/DialogSlider";
 import {
@@ -58,51 +59,132 @@ const data = [
       </>
     ),
   },
+  {
+    image: "/assets/images/img.png",
+    title: "タイトル",
+    id: "トークンID",
+    text: (
+      <>
+        説明テキスト説明テキスト説明 <br />
+        テキスト説明テキスト説明…
+      </>
+    ),
+  },
+  {
+    image: "/assets/images/sauri_009.jpg",
+    title: "タイトル",
+    id: "トークンID",
+    text: (
+      <>
+        説明テキスト説明テキスト説明 <br />
+        テキスト説明テキスト説明…
+      </>
+    ),
+  },
+  {
+    image: "/assets/images/sauri_009.jpg",
+    title: "タイトル",
+    id: "トークンID",
+    text: (
+      <>
+        説明テキスト説明テキスト説明 <br />
+        テキスト説明テキスト説明…
+      </>
+    ),
+  },
+  {
+    image: "/assets/images/sauri_009.jpg",
+    title: "タイトル",
+    id: "トークンID",
+    text: (
+      <>
+        説明テキスト説明テキスト説明 <br />
+        テキスト説明テキスト説明…
+      </>
+    ),
+  },
 ];
+
+const SwiperButtonNext = () => {
+  const swiper = useSwiper();
+  return  <button
+  onClick={() => swiper.slidePrev()}
+ className="absolute z-50 bottom-40 left-5 md:left-[calc(50%-300px)] flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
+>
+ <img className="max-md:w-4" src="/assets/images/arrow_prev.png" />
+</button>;
+};
+const SwiperButtonPrev = () => {
+  const swiper = useSwiper();
+  return   <button
+  onClick={() => swiper.slideNext()}
+  className="absolute z-50 max-md:right-5 md:left-[calc(50%+220px)] bottom-40 flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
+>
+  <img className="max-md:w-4" src="/assets/images/arrow_next.png" />
+</button>
+};
 export default function Home() {
+  const swiper = useSwiper();
   const slider = useRef<any>(null);
   let [isOpenNote, setIsOpenNote] = useState(false);
   let [isOpenAddress, setIsOpenAddress] = useState(false);
   let [isOpenMenu, setIsOpenMenu] = useState(false);
   const notify = () => toast(<><span className="text-[15px] font-bold">コピー完了</span><br /> 現在のURLをコピーしました</>);
 
-  var settings = {
-    centerMode: true,
-    infinite: true,
-    variableWidth: true,
-    arrows: false,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          variableWidth: false,
-        },
-      },
-    ],
-  };
   return (
+    <>
+    <header className="z-40 flex items-center pt-3 px-3 md:pt-8">
+      <div className="flex h-[66px] w-full">
+        <div className="flex items-center pr-4 pl-4 md:pr-10">
+          <a
+            href="/"
+            className=" block duration-150 hover:opacity-75"
+          >
+            <img className="md:w-[240px]" src="/assets/images/logo-bk.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
     <main className="">
       <p className="p-5 text-center">Deck ID : 0x.....</p>
       <div className="overflow-hidden">
-        <div className="js-slider relative mx-auto max-w-[500px]">
-          <Slider ref={slider} {...settings} className="">
-            {data.map((item, index) => (
+        <div className="">
+        <Swiper
+        scrollbar={{
+          draggable: true,
+          dragSize: 200,
+        }}
+        slidesPerView={'auto'}
+        centeredSlides={true}
+        spaceBetween={10}
+        modules={[Scrollbar]}
+        className="mySwiper"
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
               <div
                 key={index}
-                className="max-w-[500px] overflow-hidden px-1 md:px-3"
+                className="overflow-hidden px-1 md:px-3"
               >
-                <figure className="h-[calc(100vw_-_32px)] md:h-[500px]">
+                <figure className="h-[400px]">
                   <img
                     className="size-full object-cover"
                     src={item.image}
                     alt=""
                   />
                 </figure>
-                <div className="inner py-7">
+                <div className="inner py-10">
                   <p className="text-center text-[18px] font-bold">
                     {item.title}
                   </p>
@@ -121,20 +203,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              </SwiperSlide>
             ))}
-          </Slider>
-          <button
-            onClick={() => slider?.current?.slickPrev()}
-            className="absolute bottom-40 left-4 flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
-          >
-            <img className="max-md:w-4" src="/assets/images/arrow_prev.png" />
-          </button>
-          <button
-            onClick={() => slider?.current?.slickNext()}
-            className="absolute right-4 bottom-40 flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
-          >
-            <img className="max-md:w-4" src="/assets/images/arrow_next.png" />
-          </button>
+          <SwiperButtonNext />
+          <SwiperButtonPrev />
+      </Swiper>
         </div>
       </div>
       
@@ -350,5 +423,6 @@ export default function Home() {
         theme="light"
         />
     </main>
+    </>
   );
 }

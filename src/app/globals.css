@@ -21,16 +21,17 @@
 
 /* Slider */
 
-.js-slider .slick-slide .inner {
+:root {
+  --swiper-scrollbar-bottom: 225px;
+  --swiper-scrollbar-size: 12px;
+  --swiper-scrollbar-bg-color: none;
+  --swiper-scrollbar-drag-bg-color: #999
+}
+
+.swiper-slide .inner{
   opacity: 0;
   transition: all 0.3s;
 }
-.js-slider .slick-slide.slick-current .inner {
+.swiper-slide.swiper-slide-active .inner{
   opacity: 1;
-}
-.slick-list {
-  overflow: inherit !important;
-}
-.slick-track {
-  overflow: hidden;
 }
