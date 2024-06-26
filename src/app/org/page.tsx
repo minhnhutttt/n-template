@@ -146,7 +146,7 @@ export default function Home() {
         }}
         slidesPerView={'auto'}
         centeredSlides={true}
-        spaceBetween={10}
+        spaceBetween={2}
         modules={[Scrollbar]}
         className="mySwiper"
         breakpoints={{
@@ -162,7 +162,7 @@ export default function Home() {
           <SwiperSlide key={index}>
               <div
                 key={index}
-                className="overflow-hidden px-1 md:px-3"
+                className="overflow-hidden px-1"
               >
                 <figure className="max-md:h-[340px] md:h-[calc(45vh)]">
                   <img
