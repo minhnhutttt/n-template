@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <p className="flex h-[100px] items-center justify-center">
+        <p className="flex h-20 items-center justify-center">
           ©︎2024 NFTカードデッキ
         </p>
       </body>

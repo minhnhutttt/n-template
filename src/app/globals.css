@@ -22,7 +22,7 @@
 /* Slider */
 
 :root {
-  --swiper-scrollbar-bottom: 225px;
+  --swiper-scrollbar-top: calc(45vh + 10px);
   --swiper-scrollbar-size: 12px;
   --swiper-scrollbar-bg-color: none;
   --swiper-scrollbar-drag-bg-color: #999
@@ -34,4 +34,9 @@
 }
 .swiper-slide.swiper-slide-active .inner{
   opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .swiper-scrollbar {
+    display: none !important;
+  }
 }

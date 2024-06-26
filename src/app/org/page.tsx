@@ -21,8 +21,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -32,8 +31,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -43,8 +41,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -54,8 +51,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -65,8 +61,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -76,8 +71,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -87,8 +81,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -98,8 +91,7 @@ const data = [
     id: "トークンID",
     text: (
       <>
-        説明テキスト説明テキスト説明 <br />
-        テキスト説明テキスト説明…
+        メタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータメタデータ
       </>
     ),
   },
@@ -109,7 +101,7 @@ const SwiperButtonNext = () => {
   const swiper = useSwiper();
   return  <button
   onClick={() => swiper.slidePrev()}
- className="absolute z-50 bottom-40 left-5 md:left-[calc(50%-300px)] flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
+ className="absolute z-50 bottom-40 left-5 md:left-[calc(50%-320px)] flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
 >
  <img className="max-md:w-4" src="/assets/images/arrow_prev.png" />
 </button>;
@@ -118,14 +110,12 @@ const SwiperButtonPrev = () => {
   const swiper = useSwiper();
   return   <button
   onClick={() => swiper.slideNext()}
-  className="absolute z-50 max-md:right-5 md:left-[calc(50%+220px)] bottom-40 flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
+  className="absolute z-50 max-md:right-5 md:left-[calc(50%+240px)] bottom-40 flex size-12 cursor-pointer items-center justify-center rounded-lg border border-[#999] bg-white md:bottom-32 md:size-[80px]"
 >
   <img className="max-md:w-4" src="/assets/images/arrow_next.png" />
 </button>
 };
 export default function Home() {
-  const swiper = useSwiper();
-  const slider = useRef<any>(null);
   let [isOpenNote, setIsOpenNote] = useState(false);
   let [isOpenAddress, setIsOpenAddress] = useState(false);
   let [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -133,19 +123,19 @@ export default function Home() {
 
   return (
     <>
-    <header className="z-40 flex items-center pt-3 px-3 md:pt-8">
-      <div className="flex h-[66px] w-full">
+    <header className="z-40 flex items-center py-5 h-20 px-3">
+      <div className="flex w-full">
         <div className="flex items-center pr-4 pl-4 md:pr-10">
           <a
             href="/"
             className=" block duration-150 hover:opacity-75"
           >
-            <img className="md:w-[240px]" src="/assets/images/logo-bk.svg" alt="" />
+            <img className="w-[240px]" src="/assets/images/logo-bk.svg" alt="" />
           </a>
         </div>
       </div>
     </header>
-    <main className="">
+    <main>
       <p className="p-5 text-center">Deck ID : 0x.....</p>
       <div className="overflow-hidden">
         <div className="">
@@ -160,9 +150,6 @@ export default function Home() {
         modules={[Scrollbar]}
         className="mySwiper"
         breakpoints={{
-          640: {
-            slidesPerView: 2,
-          },
           768: {
             slidesPerView: 2,
           },
@@ -177,19 +164,19 @@ export default function Home() {
                 key={index}
                 className="overflow-hidden px-1 md:px-3"
               >
-                <figure className="h-[400px]">
+                <figure className="max-md:h-[340px] md:h-[calc(45vh)]">
                   <img
                     className="size-full object-cover"
                     src={item.image}
                     alt=""
                   />
                 </figure>
-                <div className="inner py-10">
+                <div className="inner py-[4vh] md:h-[calc(30vh)]">
                   <p className="text-center text-[18px] font-bold">
                     {item.title}
                   </p>
-                  <p className="mt-2 text-center text-[15px]">{item.id}</p>
-                  <p className="mt-6 mb-4 text-center text-[16px]">
+                  <p className="mt-2 text-center text-[16px] md:text-[3vmin]">{item.id}</p>
+                  <p className="mt-[2vmin] mb-4 text-center md:text-[2vmin]">
                     {item.text}
                   </p>
                   <div className="flex justify-center overflow-hidden">

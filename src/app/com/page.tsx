@@ -26,20 +26,20 @@ export default function Home() {
 
   return (
     <>
-    <header className="z-40 flex items-center pt-3 px-3 md:pt-8 bg-slate-900">
-      <div className="flex h-[66px] w-full">
+    <header className="z-40 flex items-center py-5 h-20 px-3 bg-slate-900">
+      <div className="flex w-full">
         <div className="flex items-center pr-4 pl-4 md:pr-10">
           <a
             href="/"
             className=" block duration-150 hover:opacity-75"
           >
-            <img className="md:w-[240px]" src="/assets/images/logo-wh.svg" alt="" />
+            <img className="w-[240px]" src="/assets/images/logo-wh.svg" alt="" />
           </a>
         </div>
       </div>
     </header>
     <main className="">
-      <div className="md:h-[50vh] bg-slate-900 text-white">
+      <div className="md:h-[calc(50vh-80px)] bg-slate-900 text-white">
         <div className="border-b flex-1">
           <div className="flex items-center justify-between gap-3 py-4 px-4">
             <div>
@@ -48,13 +48,13 @@ export default function Home() {
             <div>/ 34 </div>
           </div>
         </div>
-        <div className="h-[calc(50vh-56px)] min-h-[280px] flex items-center overflow-auto">
+        <div className="h-[calc(50vh-136px)] max-md:min-h-[280px] flex items-center overflow-auto">
             <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
                 {[...Array(12)].map((_, index) => (
-                  <div className="h-[calc(50vh-56px)] min-h-[280px] aspect-square" key={index}>
+                  <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] aspect-square" key={index}>
                       <DialogSlider image="/assets/images/sauri_009.jpg">
                       <img
-                            className="h-[calc(50vh-56px)] min-h-[280px] w-full object-contain snap-center"
+                            className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full object-contain snap-center"
                             src="/assets/images/sauri_009.jpg"
                             alt=""
                         />
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <div className="md:h-[50vh] bg-rose-950 text-white">
+      <div className="md:h-[calc(50vh-80px)] bg-rose-950 text-white">
         <div className="border-b flex-1">
           <div className="flex items-center justify-between gap-3 py-4 px-4">
             <div>
@@ -73,13 +73,13 @@ export default function Home() {
             <div>/ 34 </div>
           </div>
         </div>
-        <div className="h-[calc(50vh-56px)] min-h-[280px] flex items-center overflow-auto">
+        <div className="h-[calc(50vh-136px)] max-md:min-h-[280px] flex items-center overflow-auto">
             <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
                 {[...Array(12)].map((_, index) => (
-                  <div className="h-[calc(50vh-56px)] min-h-[280px] aspect-square" key={index}>
+                  <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] aspect-square" key={index}>
                       <DialogSlider image="/assets/images/sauri_009.jpg">
                       <img
-                            className="h-[calc(50vh-56px)] min-h-[280px] w-full object-contain snap-center"
+                            className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full object-contain snap-center"
                             src="/assets/images/sauri_009.jpg"
                             alt=""
                         />
@@ -89,7 +89,6 @@ export default function Home() {
             </div>
         </div>
       </div>
-
       <div
         onClick={() => setIsOpenMenu(!isOpenMenu)}
         className="fixed right-0 bottom-0 z-50 cursor-pointer bg-white hover:bg-gray-200 max-lg:hidden lg:h-screen lg:w-[60px]"
