@@ -3,6 +3,7 @@ import "./globals.css";
 import Fv from "@/components/Fv";
 import LineButton from "@/components/LineButton";
 import Header from "@/components/Header";
+import Artist from "@/components/Artist";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,15 +19,19 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex bg-[url('/assets/images/bg.png')] bg-cover">
-          <div className="flex-1 h-screen overflow-hidden sticky top-0">
+          <div className="flex-1 h-screen overflow-hidden xl:sticky top-0">
             <Fv />
-            <LineButton />
+            <div className="max-xl:hidden">
+              <LineButton />
+            </div>
           </div>
-          <div className="flex-[0_0_550px] bg-white relative h-[20000px]">
+          <div className="w-[550px] xl:flex-[0_0_28.646vw] bg-white relative h-[20000px]">
             <Header />
             {children}
           </div>
-          <div className="flex-1"></div>
+          <div className="flex-1">
+            <Artist />
+          </div>
         </div>
       </body>
     </html>
