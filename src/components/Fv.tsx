@@ -2,7 +2,7 @@
 
 const Fv = () => {
   return (
-    <div data-scroll="out" className="max-xl:absolute max-xl:inset-0 max-xl:z-50 flex justify-center xl:pt-[clamp(10px,3.818vmin,42px)] xl:pb-[clamp(10px,2.182vmin,24px)] pt-8 px-5 max-xl:animate-[fadeOut_8s_forwards]">
+    <div data-scroll="out" className="flex justify-center xl:pt-[clamp(10px,3.818vmin,42px)] xl:pb-[clamp(10px,2.182vmin,24px)] pt-8 px-5 ">
       <div className="relative flex xl:aspect-[540/830] max-xl:h-[686px] max-xl:w-[450px] xl:h-[75.455vmin] max-h-[830px] w-full max-w-[540px] items-center justify-center overflow-hidden xl:rounded-tl-[55px] xl:rounded-br-[55px] rounded-tl-[45px] rounded-br-[45px] p-5 xl:p-[2.182vmin] before: before:absolute before:z-[1] before:flex xl:before:h-[calc(100%-20px)] before:h-[calc(100%-15px)] xl:before:w-[calc(100%-20px)] before:w-[calc(100%-15px)] before:items-center before:justify-center before:rounded-tl-[55px] before:rounded-br-[55px] before:bg-[url('/assets/images/bg_03.jpg')] before:bg-cover after:absolute after:h-[2000px] after:w-[2000px] after:aspect-square after:animate-[border-animation_5s_linear_infinite] after:rounded-tl-[55px] after:rounded-br-[55px] after:bg-[conic-gradient(_transparent_0%12.5%,_transparent_12.5%25%,_#BD84FA_25%37.5%,_#BD84FA_37.5%50%,_transparent_50%62.5%,_transparent_62.5%75%,_#43ABFC_75%87.5%,_#43ABFC_87.5%100%_)] after:content-['']">
         <div className="relative z-10 h-full w-full xl:rounded-tl-[55px] xl:rounded-br-[55px] rounded-tl-[45px] rounded-br-[45px] bg-white/80 p-2 xl:p-[clamp(5px,1.091vmin,12px)]">
           <div className="flex justify-end">

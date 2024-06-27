@@ -10,7 +10,8 @@ export default function Home() {
   },[])
   return (
     <main>
-      <div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-black/60 max-xl:animate-[fadeOut_8s_forwards]"></div>
         <img src="/assets/images/img-fv.png" alt="" />
       </div>
       <Intro />
