@@ -18,7 +18,7 @@ export default function DialogSlider({ image, children }: DialogSliderType) {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="block cursor-pointer text-center text-[16px] font-bold"
+        className="block cursor-pointer text-center text-[16px] font-bold w-full"
       >
         {children}
       </button>

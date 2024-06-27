@@ -49,15 +49,17 @@ export default function Home() {
           </div>
         </div>
         <div className="h-[calc(50vh-136px)] max-md:min-h-[280px] flex items-center overflow-auto">
-            <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
+            <div className="relative w-full flex gap-3 snap-x snap-mandatory overflow-x-auto">
                 {[...Array(12)].map((_, index) => (
                   <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] aspect-square flex justify-center items-center" key={index}>
                       <DialogSlider image="/assets/images/sauri_009.jpg">
+                      <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full snap-center">
                       <img
-                            className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full object-contain snap-center"
+                            className="w-full h-full object-cover"
                             src="/assets/images/sauri_009.jpg"
                             alt=""
                         />
+                        </div>
                       </DialogSlider>
                   </div>
                 ))}
@@ -74,15 +76,17 @@ export default function Home() {
           </div>
         </div>
         <div className="h-[calc(50vh-136px)] max-md:min-h-[280px] flex items-center overflow-auto">
-            <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto">
+        <div className="relative w-full flex gap-3 snap-x snap-mandatory overflow-x-auto">
                 {[...Array(12)].map((_, index) => (
                   <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] aspect-square flex justify-center items-center" key={index}>
                       <DialogSlider image="/assets/images/sauri_009.jpg">
+                      <div className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full snap-center">
                       <img
-                            className="h-[calc(50vh-155px)] max-md:min-h-[280px] w-full object-contain snap-center"
+                            className="w-full h-full object-cover"
                             src="/assets/images/sauri_009.jpg"
                             alt=""
                         />
+                        </div>
                       </DialogSlider>
                   </div>
                 ))}
