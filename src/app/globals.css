@@ -2,42 +2,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* --font-family-sans: -apple-system, blinkMacSystemFont, Helvetica, 'Yu Gothic', YuGothic,
-    'BIZ UDPGothic', Meiryo, sans-serif;
-  --font-family-sans: -apple-system, blinkMacSystemFont, Helvetica, 'Hiragino Sans',
-    'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', Meiryo, sans-serif;
-  --font-family-serif: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', serif; */
+  --default-font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
   --font-family-sans: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
   --font-family-mono: "JetBrains Mono", monospace;
 
-  --color-primary: #ff69e8;
-  --color-ss: #f10;
-  --color-primary-rgb: 255 105 232;
-  --color-bg-01: #2c2d30;
-  --color-bg-02: #5c5c5d;
-  --color-bg-03: #17181b;
-  --color-bg-04: #000000;
-  --color-bg-04-rgb: 0 0 0;
-  --color-alert: #e62719;
-  --color-caution: #fbff27;
+  --color-bg-01: #BD84FA;
+  --color-bg-02: #6E69FC;
+  --color-bg-03: #43ABFC;
+  --color-bg-04: #65D7FA;
+  --color-bg-05: #101541;
 
-  /* Text */
-  --color-main: #ffffff;
-  --color-sub: #999999;
-  --color-sub-02: #808080;
-  --color-sub-03: #3a3a3a;
-
-  /* Code */
-  --color-blue: #6da7fe;
-  --color-blue-dark: #3b89ff;
-  --color-yellow: #fbff27;
-  --color-yellow-dark: #d2b20a;
-  --color-green: #4ddf99;
-  --color-green-dark: #00c366;
-  --color-orange: #ffc657;
-  --color-orange-dark: #ff9211;
-  --color-red: #f672b2;
-  --color-red-dark: #ee1b81;
-  --color-purple: #c88bf7;
-  --color-purple-dark: #a13fee;
+  /* Gradient */
+  --image-gradient-01: linear-gradient(90deg, #BD84FA 0%, #6E69FC 40%, #43ABFC 65%, #65D7FA 100%);
+  --color-gradient-02: #101541;
+  --color-gradient-03: linear-gradient(90deg, #FFB310 0%, #FFF30D 16%, #FFB90D 34%, #FFB90D 40%, #FFB90D 41%, #FEBA0B 45%, #FEC006 47%, #FEE00C 50%, #FDDE0B 53%, #FCD70A 54%, #F5BA07 55%, #F2A905 56%, #F2A905 65%, #CA8D06 71%, #A87407 76%, #A77207 84%, #AD7607 87%, #C08407 91%, #D79608 95%, #D79406 99%, #D99002 100%);
+  --color-gradient-04: linear-gradient(90deg, #FF75C3 0%, #FFA647 20%, #FFE83F 40%, #9FFF5B 60%, #70E2FF 80%, #CD93FF 100%);
+  --color-gradient-05: linear-gradient(180deg, #01B902 0%, #FFF 100%);
 }
