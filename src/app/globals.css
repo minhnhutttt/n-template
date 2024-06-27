@@ -3,6 +3,7 @@
 
 @theme {
   --default-font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  --font-family-gothic: 'Hiragino Kaku Gothic Std', sans-serif;
   --font-family-sans: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
   --font-family-mono: "JetBrains Mono", monospace;
 
@@ -11,11 +12,164 @@
   --color-bg-03: #43ABFC;
   --color-bg-04: #65D7FA;
   --color-bg-05: #101541;
+  --color-bg-line: #01B902;
+}
 
-  /* Gradient */
-  --image-gradient-01: linear-gradient(90deg, #BD84FA 0%, #6E69FC 40%, #43ABFC 65%, #65D7FA 100%);
-  --color-gradient-02: #101541;
-  --color-gradient-03: linear-gradient(90deg, #FFB310 0%, #FFF30D 16%, #FFB90D 34%, #FFB90D 40%, #FFB90D 41%, #FEBA0B 45%, #FEC006 47%, #FEE00C 50%, #FDDE0B 53%, #FCD70A 54%, #F5BA07 55%, #F2A905 56%, #F2A905 65%, #CA8D06 71%, #A87407 76%, #A77207 84%, #AD7607 87%, #C08407 91%, #D79608 95%, #D79406 99%, #D99002 100%);
-  --color-gradient-04: linear-gradient(90deg, #FF75C3 0%, #FFA647 20%, #FFE83F 40%, #9FFF5B 60%, #70E2FF 80%, #CD93FF 100%);
-  --color-gradient-05: linear-gradient(180deg, #01B902 0%, #FFF 100%);
+/* Utility */
+
+.u-stroke {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.u-bg-gradient-01 {
+  background-image: linear-gradient(90deg, #BD84FA 0%, #6E69FC 40%, #43ABFC 65%, #65D7FA 100%);
+}
+.u-bg-gradient-02 {
+  background-image: linear-gradient(90deg, #FFB310 0%, #FFF30D 16%, #FFB90D 34%, #FFB90D 40%, #FFB90D 41%, #FEBA0B 45%, #FEC006 47%, #FEE00C 50%, #FDDE0B 53%, #FCD70A 54%, #F5BA07 55%, #F2A905 56%, #F2A905 65%, #CA8D06 71%, #A87407 76%, #A77207 84%, #AD7607 87%, #C08407 91%, #D79608 95%, #D79406 99%, #D99002 100%);
+}
+.u-bg-gradient-03 {
+  background-image: linear-gradient(90deg, #FF75C3 0%, #FFA647 20%, #FFE83F 40%, #9FFF5B 60%, #70E2FF 80%, #CD93FF 100%);
+}
+.u-bg-gradient-04 {
+  background-image: linear-gradient(180deg, #01B902 0%, #FFF 100%);
+}
+
+/* Animation */
+[data-scroll='in'] .popoupin {
+  animation: 1s anim-popoupin ease forwards;
+  opacity: 0;
+  transform: translateX(-5px);
+}
+
+@keyframes border-animation {
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-popoupin {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes anim-bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+
+/* Hamburger */
+
+.stick {
+  width: 30px;
+  height: 4px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.stick:last-child {
+  margin-bottom: 0px;
+}
+
+.stick-1.open {
+  animation: stick-1-open .6s ease-out forwards;
+}
+
+.stick-2.open {
+  animation: stick-2-open .6s linear forwards;
+}
+
+.stick-3.open {
+  animation: stick-3-open .6s linear forwards;
+}
+
+@keyframes stick-1-open {
+  0%   {width: 30px;}
+  40%  {width: 4px; transform: translate(15px, 0px);}
+  75%, 80%  {width: 4px; transform: translate(15px, -10px); animation-timing-function: cubic-bezier(0,1,1,1);}
+  100% { width: 4px; transform: translate(10px, 18px);}
+}
+
+@keyframes stick-2-open {
+  80%  { transform: translate(0px, 0px) rotate(0deg);}
+  100% { transform: translate(0px, 0px) rotate(40deg);}
+}
+
+@keyframes stick-3-open {
+  80%  { transform: translate(0px, 0px) rotate(0deg);}
+  100% { transform: translate(0px, -11px) rotate(-40deg);}
+}
+
+.stick-1.close {
+  width: 4px; 
+  transform: translate(0, 0);
+  animation: stick-1-close .6s ease-out forwards;
+}
+
+.stick-2.close {
+  transform: translate(0px, 0px) rotate(40deg);
+  animation: stick-2-close .6s ease-out forwards;
+}
+
+.stick-3.close {
+  transform: translate(0px, -23px) rotate(-40deg);
+  animation: stick-3-close .6s ease-out forwards;
+}
+
+@keyframes stick-1-close {
+  0%, 70% {width: 0px;}
+  100%    {width: 30px; transform: translate(0, 0);}
+}
+
+@keyframes stick-2-close {
+  0%   {width: 30px;}
+  20%  { width: 4px; transform: translate(0, 0px) rotate(40deg);}
+  40%  { width: 0px;}
+  65%  {transform: translate(0, -15px); animation-timing-function: cubic-bezier(0,1,1,1);}
+  80%  {width: 0px;}
+  100% {width: 30px; transform: translate(0, 0px);}
+}
+
+@keyframes stick-3-close {
+  0%   {width: 30px;}
+  20%  { width: 4px; transform: translate(0, -23px) rotate(-40deg);}
+  65%  {transform: translate(0, -24px); animation-timing-function: cubic-bezier(0,1,1,1);}
+  90%  {width: 4px;}
+  100% {width: 20px; margin-left: 10px; transform: translate(0, 0px);}
 }
