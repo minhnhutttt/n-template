@@ -50,7 +50,7 @@ export default function FaqItem({ id, question, answer }: FaqItemPropsType) {
         </div>
       </button>
       <div ref={contentRef} className="h-0 overflow-hidden">
-        <p className="pb-4 pl-8 md:text-[14px] leading-[1.6] text-black md:w-[85%] md:pb-7 md:pl-10">
+        <p className="pb-4 pl-8 md:text-[14px] text-[13px] leading-[1.6] text-black md:w-[85%] md:pb-7 md:pl-10">
           {answer}
         </p>
       </div>

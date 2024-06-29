@@ -34,7 +34,7 @@ const Process = () => {
           </div>
           <div className="md:mt-12 mt-8 px-5">
             <div className="space-y-10 relative w-full max-w-[470px] mx-auto ">
-                <span className="absolute w-2.5 bg-[#D2D3E0] top-[15px] bottom-[15px] md:left-[26px] left-[20px]"></span>
+                <span className="fade-up absolute w-2.5 bg-[#D2D3E0] top-[15px] bottom-[15px] md:left-[26px] left-[20px]"></span>
                 {data.map((item, index)=> (
                     <div className="fade-up flex items-center gap-5 relative" key={index}>
                         <div className="md:w-[60px] w-[50px] aspect-square bg-[#6E69FC] rounded-full flex items-center justify-center md:text-[32px] text-[20px] text-white font-semibold">{item.id}</div>

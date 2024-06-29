@@ -61,7 +61,7 @@ export default function FAQ() {
       className="px-5 pb-12 pt-14 mb-[30px] md:mb-[70px] md:pb-[55px] md:pt-[120px]"
     >
       <div className="mx-auto w-full max-w-[920px]">
-        <div className="px-5">
+        <div>
             <Title>よくある質問</Title>
           </div>
         <div className="mx-auto mt-8 w-full space-y-[20px] md:mt-[40px] md:space-y-[30px]">
