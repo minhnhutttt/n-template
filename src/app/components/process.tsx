@@ -4,45 +4,50 @@ import useScrollAnimations from "@/hooks/useScrollAnimations";
 
 const data = [
     {
-        image: '/assets/images/liver-title-01.png',
-        text: 'ライブ配信の大きなメリットは、スキマ時間を使っていつでも、どこでも配信をすることが可能な点です。18歳以上であれば男女関係なく何歳でも「ライバー」という職業を始めることが可能です。',
+        id: '1',
+        title: 'お問い合わせ',
+        text: 'まずは公式LINEでお問い合わせでご相談ください',
     },
     {
-        image: '/assets/images/liver-title-02.png',
-        text: '学生や主婦の方はもちろんのこと、職業問わず幅広い年齢の方がライブ配信をしています。自分のペースで配信をし、副業で行う方、ライバー専門で行う方など、様々なスタイルで活動しております。',
+        id: '2',
+        title: '必要事項を提出',
+        text: 'お名前、生年月日、TikTokアカウントなどを必要事項に沿ってLINEで送っていただきます。',
     },
     {
-        image: '/assets/images/liver-title-03.png',
-        text: '月に数万円から十数万円稼いで生活の足しにされるという方もいれば、多い方では月に1000万円以上稼ぐ方もおり、まさに「夢のある」職業です。 弊社でも過去に、一年間で一億円近く稼いだライバーさんもいらっしゃいます。 その方は芸能人でもインフルエンサーでもなく、ごく一般の主婦の方で、当然ライブ配信も皆さんと同じように未経験の方でした。',
+        id: '3',
+        title: '概要説明',
+        text: 'TOP LIVEライバー報酬や概要説明など説明後にライバー登録をしていただきます。',
+    },
+    {
+        id: '4',
+        title: '審査',
+        text: '配信の説明をした後、実際にTikTokLIVEによる配信の審査が行われ結果をご連絡いたします。',
     },
 ]
 const Process = () => {
   const ref = useScrollAnimations(); 
     return (
-      <div ref={ref} className="md:pt-14 pt-10 relative">
+      <div ref={ref} className="md:pt-16 pt-10 relative">
         <div className="md:mt-16 mt-8">
             <div className="px-5">
-            <Title>ライバーって何？</Title>
-            <p className="fade-up md:text-[16px] text-[13px] py-6 px-3">
-            ライバーとは、ライブ配信アプリを使用してライブ配信を行い、リスナーを楽しませて稼ぐことが出来る、全く新しい職業です。
-            </p>
+            <Title>所属までの流れ</Title>
           </div>
-          <div className="space-y-5 mt-4">
-            {data.map((item, index)=> (
-                <div className="fade-up h-[370px] group flex items-center justify-center flex-col px-5 relative" key={index}>
-                    <span className="w-[150px] md:w-[188px] block absolute h-full group-[&:nth-child(1)]:left-0 group-[&:nth-child(2)]:right-0 group-[&:nth-child(3)]:left-0 group-[&:nth-child(1)]:bg-[#EEDDFF] group-[&:nth-child(2)]:bg-[#C8C6FF] group-[&:nth-child(3)]:bg-[#C9E8FF]">
-                        <img className="group-[&:nth-child(2)]:rotate-90 group-[&:nth-child(2)]:ml-auto" src="/assets/images/deco.png" alt="" />
-                    </span>
-                    <div className="relative">
-                        <h4 className="">
-                            <img src={item.image} alt="" />
-                        </h4>
-                        <p className="md:w-[474px] mx-auto md:text-[16px] text-[14px] mt-5">
-                            {item.text}
-                        </p>
+          <div className="md:mt-12 mt-8 px-5">
+            <div className="space-y-10 relative w-full max-w-[470px] mx-auto ">
+                <span className="absolute w-2.5 bg-[#D2D3E0] top-[15px] bottom-[15px] md:left-[26px] left-[20px]"></span>
+                {data.map((item, index)=> (
+                    <div className="fade-up flex items-center gap-5 relative" key={index}>
+                        <div className="md:w-[60px] w-[50px] aspect-square bg-[#6E69FC] rounded-full flex items-center justify-center md:text-[32px] text-[20px] text-white font-semibold">{item.id}</div>
+                        <div className="flex-1">
+                            <p className="md:text-[20px] text-[16px] font-semibold text-[#6E69FC]">{item.title}</p>
+                            <p className="md:text-[16px] text-[13px]">{item.text}</p>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+            <div className="fade-up flex justify-center pt-10">
+                <img src="/assets/images/img-process.png" alt="" />
+            </div>
           </div>
         </div>
       </div>

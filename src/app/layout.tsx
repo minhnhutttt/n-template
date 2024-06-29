@@ -4,6 +4,9 @@ import Fv from "@/components/Fv";
 import LineButton from "@/components/LineButton";
 import Header from "@/components/Header";
 import Artist from "@/components/Artist";
+import Footer from "@/components/Footer";
+import { usePathname } from "next/navigation";
+import Mainvisual from "@/components/Mainvisual";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,17 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex justify-center bg-[url('/assets/images/bg.png')] bg-cover">
-          <div className="flex-1 xl:h-screen xl:overflow-hidden max-xl:absolute max-xl:inset-0 max-xl:z-50 xl:sticky top-0 max-xl:animate-[fadeOut_8s_forwards]">
-            <Fv />
-            <div className="max-xl:hidden">
-              <LineButton />
-            </div>
-          </div>
-          <div className="w-[550px] xl:flex-[0_0_28.646vw] bg-white relative h-[20000px]">
+          <Mainvisual />
+          <div className="w-[550px] xl:flex-[0_0_28.646vw] bg-white relative">
             <Header />
             {children}
+            <Footer />
           </div>
-          <div className="flex-1 max-xl:hidden">
+          <div className="flex-1 max-xl:hidden overflow-hidden">
             <Artist />
           </div>
         </div>

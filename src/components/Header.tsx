@@ -20,13 +20,13 @@ const Header = () => {
             NavOpen ? "" : "invisible opacity-0"
           }`}
         >
-          <div className=" w-[326px] ml-[50px]">
+          <div className="w-[260px] md:w-[326px] ml-[50px]">
             <ul className="flex gap-8 mb-10 flex-col">
               <li>
-                <a href="/" className="block text-[20px] text-white border-b border-white py-2 px-4" onClick={close}>企業情報</a>
+                <a href="/company" className="block text-[20px] text-white border-b border-white py-2 px-4" onClick={close}>企業情報</a>
               </li>
               <li>
-                <a href="/" className="block text-[20px] text-white border-b border-white py-2 px-4" onClick={close}>プライバシーポリシー</a>
+                <a href="/privacy-policy" className="block text-[20px] text-white border-b border-white py-2 px-4" onClick={close}>プライバシーポリシー</a>
               </li>
             </ul>
             <div className="flex p-4 md:gap-[60px] gap-10">
