@@ -30,7 +30,7 @@ const Slider = () => {
         <div className="md:mt-12 px-5 mt-8">
           <Title>育成したライバーの実績</Title>
         </div>
-        <div className="mt-6 relative overflow-hidden">
+        <div className="fade-up mt-6 relative overflow-hidden">
             <Swiper
             slidesPerView={'auto'}
             loop={true}

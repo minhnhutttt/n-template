@@ -5,6 +5,7 @@ import Intro from "./components/Intro";
 import Slider from "./components/slider";
 import Liver from "./components/liver";
 import Reasons from "./components/reasons";
+import Process from "./components/process";
 export default function Home() {
   useEffect(()=>{
     ScrollOut({
@@ -21,6 +22,7 @@ export default function Home() {
       <Slider />
       <Liver />
       <Reasons />
+      <Process />
     </main>
   );
 }
