@@ -2,8 +2,8 @@
 
 const Fv = () => {
   return (
-    <div data-scroll="out" className="flex justify-center xl:pt-[clamp(10px,3.818vmin,42px)] xl:pb-[clamp(10px,2.182vmin,24px)] pt-8 px-5 ">
-      <div className="relative flex xl:aspect-[540/830] max-xl:h-[686px] max-xl:w-[450px] xl:h-[75.455vmin] max-h-[830px] w-full max-w-[540px] items-center justify-center overflow-hidden xl:rounded-tl-[55px] xl:rounded-br-[55px] rounded-tl-[45px] rounded-br-[45px] p-5 xl:p-[2.182vmin] before: before:absolute before:z-[1] before:flex xl:before:h-[calc(100%-20px)] before:h-[calc(100%-15px)] xl:before:w-[calc(100%-20px)] before:w-[calc(100%-15px)] before:items-center before:justify-center before:rounded-tl-[55px] before:rounded-br-[55px] before:bg-[url('/assets/images/bg_03.jpg')] before:bg-cover after:absolute after:h-[2000px] after:w-[2000px] after:aspect-square after:animate-[border-animation_5s_linear_infinite] after:rounded-tl-[55px] after:rounded-br-[55px] after:bg-[conic-gradient(_transparent_0%12.5%,_transparent_12.5%25%,_#BD84FA_25%37.5%,_#BD84FA_37.5%50%,_transparent_50%62.5%,_transparent_62.5%75%,_#43ABFC_75%87.5%,_#43ABFC_87.5%100%_)] after:content-['']">
+    <div data-scroll="out" className="flex justify-center xl:pt-[clamp(10px,3.818vmin,42px)] xl:pb-[clamp(10px,2.182vmin,24px)] pt-[2.5vw] md:pt-8 px-5 ">
+      <div className="relative flex xl:aspect-[540/830] max-md:h-[132vw] max-xl:h-[686px] max-xl:w-[450px] xl:h-[75.455vmin] md:max-h-[830px] max-h-[705px] w-full max-w-[540px] items-center justify-center overflow-hidden xl:rounded-tl-[55px] xl:rounded-br-[55px] rounded-tl-[45px] rounded-br-[45px] p-5 xl:p-[2.182vmin] before: before:absolute before:z-[1] before:flex xl:before:h-[calc(100%-20px)] before:h-[calc(100%-15px)] xl:before:w-[calc(100%-20px)] before:w-[calc(100%-15px)] before:items-center before:justify-center before:rounded-tl-[55px] before:rounded-br-[55px] before:bg-[url('/assets/images/bg_03.jpg')] before:bg-cover after:absolute after:h-[2000px] after:w-[2000px] after:aspect-square after:animate-[border-animation_5s_linear_infinite] after:rounded-tl-[55px] after:rounded-br-[55px] after:bg-[conic-gradient(_transparent_0%12.5%,_transparent_12.5%25%,_#BD84FA_25%37.5%,_#BD84FA_37.5%50%,_transparent_50%62.5%,_transparent_62.5%75%,_#43ABFC_75%87.5%,_#43ABFC_87.5%100%_)] after:content-['']">
         <div className="relative z-10 h-full w-full xl:rounded-tl-[55px] xl:rounded-br-[55px] rounded-tl-[45px] rounded-br-[45px] bg-white/80 p-2 xl:p-[clamp(5px,1.091vmin,12px)]">
           <div className="flex justify-end">
             <svg
@@ -61,47 +61,47 @@ const Fv = () => {
               </defs>
             </svg>
           </div>
-          <div className="xl:pt-[clamp(5px,2.182vmin,24px)] xl:pb-[clamp(5px,1.818vmin,20px)] px-5 pt-5">
+          <div className="xl:pt-[clamp(5px,2.182vmin,24px)] xl:pb-[clamp(5px,1.818vmin,20px)] px-5 md:pt-5 pt-3">
             <div className="popoupin u-bg-gradient-01 mx-auto w-full max-w-[430px] p-px">
               <div className="bg-white py-2 xl:py-[clamp(1px,0.727vmin,8px)]">
-                <h2 className="text-center text-[32px] xl:text-[clamp(1px,3.455vmin,38px)]">
+                <h2 className="text-center text-[clamp(14px,5.818vw,32px)] md:text-[32px] xl:text-[clamp(1px,3.455vmin,38px)]">
                   ライバー数
                 </h2>
-                <p className="text-center text-[29px] leading-[1.1] xl:text-[clamp(1px,3.182vmin,35px)]">
+                <p className="text-center text-[clamp(12px,5.273vw,29px)] md:text-[29px] leading-[1.1] xl:text-[clamp(1px,3.182vmin,35px)]">
                   累計
-                  <span className="font-gothic text-[44px] xl:text-[clamp(1px,4.818vmin,53px)]">
+                  <span className="font-gothic text-[clamp(12px,8vw,44px)] md:text-[44px] xl:text-[clamp(1px,4.818vmin,53px)]">
                     3,000
                   </span>
                   名以上
                 </p>
               </div>
             </div>
-            <div className="popoupin mt-9 flex items-end justify-center ![animation-delay:0.2s] xl:mt-[clamp(1px,4.364vmin,48px)]">
+            <div className="popoupin mt-4 md:mt-9 flex items-end justify-center ![animation-delay:0.2s] xl:mt-[clamp(1px,4.364vmin,48px)]">
               <figure>
-                <img className="md:h-[clamp(1px,3.909vmin,43px)]" src="/assets/images/live17.png" alt="" />
+                <img className="h-[clamp(1px,7.818vw,43px)] md:h-[clamp(1px,3.909vmin,43px)]" src="/assets/images/live17.png" alt="" />
               </figure>
-              <p className="leading-none text-[36px] xl:text-[clamp(1px,4vmin,44px)] whitespace-nowrap">
+              <p className="leading-none text-[clamp(12px,6.545vw,36px)] md:text-[36px] xl:text-[clamp(1px,4vmin,44px)] whitespace-nowrap">
                 最高ランク<span className="text-[29px] xl:text-[clamp(1px,3.182vmin,35px)]">の</span>
               </p>
             </div>
-            <p className="popoupin font-gothic u-stroke u-bg-gradient-02 mt-[clamp(1px,1.818vmin,20px)] text-center ![animation-delay:0.4s] xl:text-[clamp(1px,3.636vmin,40px)] text-[33px] whitespace-nowrap">
+            <p className="popoupin font-gothic u-stroke u-bg-gradient-02 mt-[clamp(1px,1.818vmin,20px)] text-center ![animation-delay:0.4s] xl:text-[clamp(1px,3.636vmin,40px)] text-[clamp(1px,6vw,33px)] md:text-[33px] whitespace-nowrap">
               GOLD PARTNER
             </p>
-            <p className="popoupin text-center ![animation-delay:0.6s] text-[36px] xl:text-[clamp(1px,4vmin,44px)]">
+            <p className="popoupin text-center ![animation-delay:0.6s] md:text-[36px] text-[clamp(12px,6.545vw,36px)] xl:text-[clamp(1px,4vmin,44px)]">
               経験がある
             </p>
-            <p className="popoupin text-center ![animation-delay:0.8s] text-[39px] xl:text-[clamp(1px,4.364vmin,48px)] whitespace-nowrap">
+            <p className="popoupin text-center ![animation-delay:0.8s] text-[clamp(1px,7.091vw,39px)] md:text-[39px] xl:text-[clamp(1px,4.364vmin,48px)] whitespace-nowrap">
               ライバー事務所が
             </p>
-            <div className="popoupin mt-7 xl:mt-[clamp(1px,2.182vmin,24px)] flex justify-center ![animation-delay:1s]">
+            <div className="popoupin mt-4 md:mt-7 xl:mt-[clamp(1px,2.182vmin,24px)] flex justify-center ![animation-delay:1s]">
               <img
-                className="animate-[anim-bounce_1.2s_infinite_ease-in-out] max-xl:w-[157px] xl:h-[clamp(1px,11.182vmin,123px)]"
+                className="animate-[anim-bounce_1.2s_infinite_ease-in-out] h-[clamp(1px,18.182vw,100px)] md:h-[100px] xl:h-[clamp(1px,11.182vmin,123px)]"
                 src="/assets/images/fv-bubble.png"
                 alt=""
               />
             </div>
             <div className="popoupin flex justify-center ![animation-delay:1.2s]">
-              <img className="xl:h-[clamp(1px,8.273vmin,91px)]" src="/assets/images/tiktok.png" alt="" />
+              <img className="h-[clamp(1px,13.455vw,74px)] md:h-[74px] xl:h-[clamp(1px,8.273vmin,91px)]" src="/assets/images/tiktok.png" alt="" />
             </div>
           </div>
           <div className="flex justify-start absolute inset-x-0 bottom-4 px-4">

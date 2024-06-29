@@ -2,6 +2,9 @@
 import { useEffect } from "react";
 import ScrollOut from "scroll-out";
 import Intro from "./components/Intro";
+import Slider from "./components/slider";
+import Liver from "./components/liver";
+import Reasons from "./components/reasons";
 export default function Home() {
   useEffect(()=>{
     ScrollOut({
@@ -11,10 +14,13 @@ export default function Home() {
   return (
     <main>
       <div className="relative">
-        <div className="absolute inset-0 bg-black/60 max-xl:animate-[fadeOut_8s_forwards]"></div>
-        <img src="/assets/images/img-fv.png" alt="" />
+        <div className="absolute inset-0 bg-black/60 xl:hidden max-xl:animate-[fadeOut_8s_forwards]"></div>
+        <img className="w-full" src="/assets/images/img-fv.png" alt="" />
       </div>
       <Intro />
+      <Slider />
+      <Liver />
+      <Reasons />
     </main>
   );
 }

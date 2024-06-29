@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex justify-center bg-[url('/assets/images/bg.png')] bg-cover">
-          <div className="flex-1 h-screen overflow-hidden max-xl:absolute max-xl:inset-0 max-xl:z-50 xl:sticky top-0 max-xl:animate-[fadeOut_8s_forwards]">
+          <div className="flex-1 xl:h-screen xl:overflow-hidden max-xl:absolute max-xl:inset-0 max-xl:z-50 xl:sticky top-0 max-xl:animate-[fadeOut_8s_forwards]">
             <Fv />
             <div className="max-xl:hidden">
               <LineButton />
@@ -29,7 +29,7 @@ export default function RootLayout({
             <Header />
             {children}
           </div>
-          <div className="flex-1 max-lg:hidden">
+          <div className="flex-1 max-xl:hidden">
             <Artist />
           </div>
         </div>
