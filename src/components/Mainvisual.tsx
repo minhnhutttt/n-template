@@ -8,7 +8,7 @@ const Mainvisual = () => {
     return (
         <div className={`flex-1 xl:h-screen xl:overflow-hidden max-xl:absolute max-xl:inset-0 max-xl:z-50 xl:sticky top-0 max-xl:animate-[fadeOut_8s_forwards] ${pathname !== "/" ? 'max-xl:!hidden' : ''}`}>
         <Fv />
-        <div className="max-xl:hidden">
+        <div className="max-xl:hidden px-5">
           <LineButton />
         </div>
       </div>

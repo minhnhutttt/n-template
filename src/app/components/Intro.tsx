@@ -1,4 +1,5 @@
 "use client";
+import LineButton from "@/components/LineButton";
 import Title from "@/components/Title";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 
@@ -9,6 +10,9 @@ const Intro = () => {
         <h3 className="fade-up flex justify-center">
             <img src="/assets/images/intro-title.png" alt="" />
         </h3>
+        <div className="md:hidden mt-8">
+          <LineButton />
+        </div>
         <div className="md:mt-16 mt-8">
           <Title>TOP LIVE とは</Title>
           <p className="fade-up md:text-[18px] text-[14px] py-6 px-3 tracking-wider">

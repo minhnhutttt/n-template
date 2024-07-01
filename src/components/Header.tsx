@@ -30,9 +30,9 @@ const Header = () => {
               </li>
             </ul>
             <div className="flex p-4 md:gap-[60px] gap-10">
-              <a href="/"><img src="/assets/images/logo-tiktok.png" alt="" /></a>
-              <a href="/"><img src="/assets/images/logo-instagram.png" alt="" /></a>
-              <a href="/"><img src="/assets/images/logo-line.png" alt="" /></a>
+            <a href="/"><img src="/assets/images/logo-tiktok.png" alt="" /></a>
+            <a href="https://www.instagram.com/toplive_tiktok/" target="_blank"><img src="/assets/images/logo-instagram.png" alt="" /></a>
+            <a href="https://lin.ee/RFM7pae" target="_blank"><img src="/assets/images/logo-line.png" alt="" /></a>
             </div>
           </div>
         </div>

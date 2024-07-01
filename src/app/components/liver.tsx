@@ -27,9 +27,9 @@ const Liver = () => {
             ライバーとは、ライブ配信アプリを使用してライブ配信を行い、リスナーを楽しませて稼ぐことが出来る、全く新しい職業です。
             </p>
           </div>
-          <div className="space-y-5 mt-4">
+          <div className="space-y-5 mt-4 overflow-hidden">
             {data.map((item, index)=> (
-                <div className="fade-up h-[370px] group flex items-center justify-center flex-col px-5 relative" key={index}>
+                <div className={`h-[370px] group flex items-center justify-center flex-col px-5 relative ${index % 2 === 0 ? 'fade-left' : 'fade-right'}`} key={index}>
                     <span className="w-[150px] md:w-[188px] block absolute h-full group-[&:nth-child(1)]:left-0 group-[&:nth-child(2)]:right-0 group-[&:nth-child(3)]:left-0 group-[&:nth-child(1)]:bg-[#EEDDFF] group-[&:nth-child(2)]:bg-[#C8C6FF] group-[&:nth-child(3)]:bg-[#C9E8FF]">
                         <img className="group-[&:nth-child(2)]:rotate-90 group-[&:nth-child(2)]:ml-auto" src="/assets/images/deco.png" alt="" />
                     </span>

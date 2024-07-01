@@ -29,6 +29,22 @@ const useScrollAnimations = () => {
           ease: "Power2.easeInOut",
           scrollTrigger: { trigger: el },
         }),
+        "fade-left": (el: HTMLElement) =>
+        gsap.from(el, {
+          autoAlpha: 0,
+          x: '100%',
+          duration: 0.5,
+          ease: "Power2.easeInOut",
+          scrollTrigger: { trigger: el },
+        }),
+        "fade-right": (el: HTMLElement) =>
+        gsap.from(el, {
+          autoAlpha: 0,
+          x: '-100%',
+          duration: 0.5,
+          ease: "Power2.easeInOut",
+          scrollTrigger: { trigger: el },
+        }),
       "zoom-out": (el: HTMLElement) =>
         gsap.from(el, {
           autoAlpha: 0,
